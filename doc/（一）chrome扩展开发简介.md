@@ -86,16 +86,6 @@ function helloWorld(name){
 ::-webkit-scrollbar-thumb {border-radius:3px;background: #45A5DB;}
 ::-webkit-scrollbar-track {width:4px;height:7px;background:transparent;}
 ::-webkit-scrollbar-track-piece {background:transparent;}
-/* 重置滚动条IE */
-html,body{
-  SCROLLBAR-FACE-COLOR: #45A5DB;
-  SCROLLBAR-HIGHLIGHT-COLOR: #45A5DB;
-  SCROLLBAR-SHADOW-COLOR: #45A5DB;
-  SCROLLBAR-DARKSHADOW-COLOR: #45A5DB;
-  SCROLLBAR-3DLIGHT-COLOR: #45A5DB;
-  SCROLLBAR-ARROW-COLOR: #505050;
-  SCROLLBAR-TRACK-COLOR: #fff;
-}
 
 /* ... */
 
@@ -114,6 +104,7 @@ html,body{
 	<p><button onclick="dealClick('王小明')">按钮</button></p>
     <script>
         function dealClick(name){
+            //这里值得注意，大部分功能性操作，比如执行脚本，执行函数，都是不可以直接执行，而需要通过chrome.*这样方式进行
             chrome.tabs.executeScript(
                 null,
                 {
