@@ -1,6 +1,10 @@
 # crxs
 
-### chrome扩展开发：
+### 样例
+
+- [demo](demo)
+
+### 说明：
 
 - [（一）chrome扩展开发简介](doc/（一）chrome扩展开发简介.md)
 
