@@ -144,7 +144,8 @@ html,body{
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "content_scripts": [  //content_scripts是在Web页面内运行的javascript脚本。通过使用标准的DOM，它们可以获取浏览器所访问页面的详细信息，并可以修改这些信息。
+  "content_scripts": [  //content_scripts是在Web页面内运行的javascript脚本。
+                        //通过使用标准的DOM，它们可以获取浏览器所访问页面的详细信息，并可以修改这些信息。
     {                   //这里的值是数组，可以针对多个站点进行不同的操作配置
       "matches": [
         "http://www.google.com/*"
@@ -159,8 +160,8 @@ html,body{
       "run_at": "document_idle"
     }
   ],
-  "permissions": [   // 一些权限的配置，比如cookie权限，比如系统通知权限，类似于notify这样的东西，在window系统上未右下角的小气泡
-    "cookies",
+  "permissions": [   //一些权限的配置，
+    "cookies",       //比如cookie权限，比如系统通知权限，类似于notify这样的东西，在window系统上未右下角的小气泡
     "notifications"
   ]
 }
@@ -168,7 +169,7 @@ html,body{
 
 page_action，browser_action类型的扩展对应位置
 
-![image](https://github.com/Froguard/crxs/raw/master/doc/res/action_pos.png)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/action_pos.jpg)
 
 
 ### 3.打包生成插件包
