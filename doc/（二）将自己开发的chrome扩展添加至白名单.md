@@ -1,7 +1,5 @@
 # chrome插件开发简介（二）——如何添“加浏览器扩展白名单”
 
-&nbsp;
-
 > 没有在Chrome应用商店web store上架发布的插件，如果没有添加到白名单里，下一次重启Chrome就会被禁用，而且无法手动启用，除非删掉重新添加。
 可以通过添加白名单可以一劳永逸地解决这个问题。
 
@@ -15,7 +13,7 @@ mac系统下设置白名单比较简单，下载[com.google.Chrome.mobileconfig]
 
 > 1.文本编辑打开文件 com.google.Chrome.mobileconfig
 
-> 2.找到 &gt;array&lt; 之下的 &gt;string&lt; 标签，然后在里面输入插件的id
+> 2.找到 &lt;array&gt; 之下的 &lt;string&gt; 标签，然后在里面输入插件的id
 
 > 3.保存之后，双击运行这个文件，期间可能会要求输入管理员密码，输入即可
 
