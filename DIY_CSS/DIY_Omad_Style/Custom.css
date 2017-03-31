@@ -1,0 +1,73 @@
+﻿
+/* omad平台定制 */
+#notification_area{
+	right: auto!important;
+	left: 5px!important;
+	bottom: 5px!important;
+	display: block;
+	max-height: 98%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 1040px;
+}
+/*hover显示全部*/
+#notification_area:hover
+{
+	z-index: 9999!important;
+}
+/*弹窗*/
+.m-layerwin{
+	z-index:10000!important;
+}
+/*原先周围的圆角拼接，都隐藏掉*/
+.notify_top,
+.notify_bottom,
+.notify_center  .notify_w,
+.notify_center  .notify_e{
+	display:none!important;
+}
+/*内容外层*/
+.notify_center{
+	position:relative;
+	padding: 10px 20px 10px 10px;
+	margin:1px 0;
+	overflow:hidden;
+	border-radius:10px;
+	background:#000!important;
+}
+/*内容内层*/
+.notify_center  .notify_content{
+	background-image: url("http://nos.netease.com/haitao/mvUSDF2HbBkW1qz12090895_36.gif");
+	background-position: right bottom;
+	background-repeat: repeat;
+	color: #5CAB4E;
+	height: 290px;
+	width: 1000px;
+	background-color:#000;
+}
+/*关闭按钮*/
+.notify_content .cl{
+	margin-left:0;
+	right:0;
+	width:16px;
+	text-align:left;
+}
+.notify_center    .cl> a{
+	color: #45A5DB!important;
+}
+/* 重置滚动条 */
+::-webkit-scrollbar {width:4px!important;height:7px;}
+::-webkit-scrollbar-button {display:none;}
+::-webkit-scrollbar-thumb {border-radius:3px;background: #45A5DB;}
+::-webkit-scrollbar-track {width:4px;height:7px;background:transparent;}
+::-webkit-scrollbar-track-piece {background:transparent;}
+/* 重置滚动条IE */
+html,body{
+  SCROLLBAR-FACE-COLOR: #45A5DB;
+  SCROLLBAR-HIGHLIGHT-COLOR: #45A5DB;
+  SCROLLBAR-SHADOW-COLOR: #45A5DB;
+  SCROLLBAR-DARKSHADOW-COLOR: #45A5DB;
+  SCROLLBAR-3DLIGHT-COLOR: #45A5DB;
+  SCROLLBAR-ARROW-COLOR: #505050;
+  SCROLLBAR-TRACK-COLOR: #fff;
+}
