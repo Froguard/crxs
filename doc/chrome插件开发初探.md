@@ -1,4 +1,4 @@
-# chrome插件开发入门讲解
+# chrome插件开发入门
 
 chrome作为目前最流行的浏览器，备受前端推崇，原因除了其对于前端标准的支持这一大核心原因之外，还有就是其强大的扩展性，
 基于其开发规范实现的插件如今已经非常庞大，在国内也是欣欣向荣，
@@ -11,7 +11,7 @@ chrome作为目前最流行的浏览器，备受前端推崇，原因除了其�
 1. 与chrome应用类似，chrome扩展主要是用于扩充chrome浏览器的功能。他体现为一些文件的集合，包括前端文件（html/css/js）,配置文件manifest.json。
 主要采用JavaScript语言进行编写。
 
-> 个别扩展可能会用到DLL和so动态库，不过处于安全性考虑，在后续的标准中，将会被舍弃，这里不再赘述
+> 个别扩展可能会用到DLL和so动态库，不过处于安全以及职责分离的考虑，在后续的标准中，将会被舍弃，这里不再赘述
 
 2. chrome扩展能做的事情：
 
@@ -43,10 +43,17 @@ chrome作为目前最流行的浏览器，备受前端推崇，原因除了其�
 
 ### Mac下
 
-mac系统下设置白名单比较简单，下载[com.google.Chrome.mobileconfig](res/mac-install-chrome-extension-whitelist/com.google.Chrome.mobileconfig)，后，双击安装即可（过程中可能会要求输入系统管理员密码）
+mac系统下设置白名单比较简单，下载[com.google.Chrome.mobileconfig](https://github.com/Froguard/crxs/blob/master/doc/res/mac-install-chrome-extension-whitelist/com.google.Chrome.mobileconfig)，后，双击安装即可（过程中可能会要求输入系统管理员密码）
 
-> 当然，为适配本插件，该文件内容已经更改，有兴趣的同学请参见[res/mac-install-chrome-extension-whitelist/用法.md](res/mac-install-chrome-extension-whitelist/用法.md)，里面有详细说明如何将自定义开发的chrome插件添加到白名单的办法。
+> 当然，为适配本插件，该文件内容已经更改:
 
+> 1.文本编辑打开文件 com.google.Chrome.mobileconfig
+
+> 2.找到 &gt;array&lt; 之下的 &gt;string&lt; 标签，然后在里面输入插件的id
+
+> 3.保存之后，双击运行这个文件，期间可能会要求输入管理员密码，输入即可
+
+> 4.重启浏览器
 
 ### windows下
 
@@ -54,38 +61,42 @@ mac系统下设置白名单比较简单，下载[com.google.Chrome.mobileconfig]
 
 2.本地计算机策略 > 计算机配置 > 管理模板，右键管理模板，选择添加/删除模板。
 
-![image](res/step2.jpg)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step2.jpg)
 
 &nbsp;<br>&nbsp;
 
-3.点击添加，将下载的chrome.adm（下载地址：[res/chrome.adm](res/chrome.adm)）添加进来。
+3.点击添加，将下载的chrome.adm（下载地址：[res/chrome.adm](https://github.com/Froguard/crxs/blob/master/doc/res/chrome.adm)）添加进来。
 
-![image](res/step3.jpg)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step3.jpg)
 
 &nbsp;<br>&nbsp;
 
 4.添加模板完成后，找到经典管理模板（ADM），点击进入，选择Google > Google Chrome
 
-![image](res/step4.jpg)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step4.jpg)
 
 &nbsp;<br>&nbsp;
 
 5.打开后如下图所示，选择扩展程序，点击进入，配置扩展程序安装白名单
 
-![image](res/step5-1.jpg) &nbsp; ![image](res/step5-2.jpg)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step5-1.jpg)
+
+&nbsp;&nbsp;↓↓↓
+
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step5-2.jpg)
 
 &nbsp;<br>&nbsp;
 
 6.点击下图中的显示按钮，将我们安装插件后的ID添加到那个值列表中，点击确定返回即可。比如我们的是 **nldeakmmeccgpaiacgpmabnjaenfdbkn**
 
-![image](res/step6-1.jpg)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step6-1.jpg)
 
 id信息如下：打开chrome的插件管理界面（地址栏 [chrome://extensions](chrome://extensions/)），找到这个插件
 
-![image](res/step6-2.png)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/step6-2.png)
 
 > 这里需要提一点，如果未开启开发者模式，可能会看不到这个id
 
-![image](res/dev-mode.png)
+![image](https://github.com/Froguard/crxs/raw/master/doc/res/dev-mode.png)
 
 &nbsp;<br>&nbsp;
