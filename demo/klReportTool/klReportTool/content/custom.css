@@ -1,0 +1,49 @@
+﻿/* 左下角“日报”按钮 */
+#klrt-btn-copy{
+    position:fixed;
+    left: 10px;
+    bottom: 72px;
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+    opacity: 0.70;
+    border: 2px solid #3178CB;
+    border-radius: 100%;
+    font-size: 14px;
+    color: #fff;
+    background-color: #398DEE;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+}
+#klrt-btn-copy:hover{
+    opacity: 1;
+}
+#klrt-btn-copy:active{
+    opacity: .85;
+}
+
+.chat-ct .chat-main .filemeta .name.z-today{
+    font-size: 14px;
+    font-weight: bold;
+    color: #DD5044;
+    animation: trinkle 6s infinite;
+}
+@keyframes trinkle
+{
+    0% {
+        color: #E192B5;
+    }
+    25% {
+        color: #4C9CFA
+    }
+    50% {
+        color: #05CE3E;
+    }
+    75% {
+        color: #61441D;
+    }
+}

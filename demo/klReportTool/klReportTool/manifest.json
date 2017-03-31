@@ -1,0 +1,66 @@
+{
+
+  "name": "klReportTool",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "小考拉前端组的日报收集工具，(→_→)",
+  "author": "hzwangfei3@corp.netease.com",
+  "icons" : {
+    "16" : "icon.png",
+    "48" : "icon.png",
+    "128" : "icon.png"
+  },
+  "browser_action": {
+    "default_title": "日报工具",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://note.youdao.com/group/*",
+        "http://note.youdao.com/group/",
+        "https://note.youdao.com/group/*",
+        "https://note.youdao.com/group/*"
+      ],
+      "css": [
+        "lib/zeroModal.css",
+        "lib/contextMenu.css",
+        "content/custom.css",
+        "content/diyMarkdown.css"
+      ],
+      "js": [
+        "lib/jquery-3.1.1.min.js",
+        "lib/clipboard.min.js",
+        "lib/zeroModal.js",
+        "lib/contextMenu.js",
+        "content/diyMarkdown.js",
+        "content/collector.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "http://note.youdao.com/*",
+        "https://note.youdao.com/*"
+      ],
+      "css": [
+        "content/diyMarkdown.css"
+      ],
+      "js": [
+        "lib/jquery-3.1.1.min.js",
+        "content/diyMarkdown.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "cookies",
+    "notifications",
+    "idle",
+    "http://*/",
+    "https://*/"
+  ]
+}

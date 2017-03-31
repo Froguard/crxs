@@ -1,0 +1,21 @@
+/* 重置markdown渲染时候css（合并表格单元格作用） */
+table tr td.u-td-hd{
+    color: #fff!important;
+    background-color: #398DEE!important;
+}
+table tr td.u-td-hd > code{
+    font-weight: bold;
+    color: inherit!important;
+    background-color: inherit!important;
+    height: 30px;
+    line-height:30px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+table tr td.u-td-hd > code:before,
+table tr td.u-td-hd > code:after{
+    display: none!important;
+    content: ""!important;
+}
