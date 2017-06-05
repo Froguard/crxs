@@ -2,7 +2,7 @@
    "content_scripts": [ {    
       "css": ["Custom.css"],    
       "all_frames": true,    
-      "matches": [ "http://omad.hz.netease.com/*"]    
+      "matches": [ "http://xxx.com/*"]    
    } ],    
    "browser_action": {
       "default_icon": "icon.png",
@@ -13,7 +13,7 @@
 		"48" : "icon.png",
 		"128" : "icon.png"
 	},
-   "description": "omad平台的部署黑框太矮了，kaola前端说增增高吧",    
+   "description": "平台的部署黑框太矮了，kaola前端说增增高吧",    
    "name": "DIY_Omad_Style",    
    "version": "1.1.0",    
    "manifest_version": 2,
